@@ -8,40 +8,35 @@ GREEN='\033[0;32m'
 echo -e "${BLUE}Updating package lists...${NC}"
 sudo apt update
 
-# Check if Docker is already installed
-if command -v docker &>/dev/null; then
-  echo -e "${BLUE}Docker is already installed.${NC}"
-else
-  echo -e "${BLUE}Docker is not installed. Installing...${NC}"
+echo -e "${BLUE}Docker is not installed. Installing...${NC}"
 
-  # Update the package index
-  sudo apt update
+# Update the package index
+sudo apt update
 
-  # Install packages to allow apt to use a repository over HTTPS
-  sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+# Install packages to allow apt to use a repository over HTTPS
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 
-  # Add Docker’s official GPG key
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+# Add Docker’s official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-  # Set up the stable Docker repository
-  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+# Set up the stable Docker repository
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-  # Update the package index again
-  sudo apt update
+# Update the package index again
+sudo apt update
 
-  # Install the latest version of Docker
-  sudo apt install -y docker-ce docker-ce-cli containerd.io
+# Install the latest version of Docker
+sudo apt install -y docker-ce docker-ce-cli containerd.io
 
-  # Create Docker group if it doesn't exist
-  if ! getent group docker > /dev/null 2>&1; then
-    echo -e "${BLUE}Creating Docker group...${NC}"
-    sudo groupadd docker
-  fi
-
-  # Add the current user to the Docker group
-  echo -e "${BLUE}Adding the current user to the Docker group...${NC}"
-  sudo usermod -aG docker $USER
+# Create Docker group if it doesn't exist
+if ! getent group docker > /dev/null 2>&1; then
+  echo -e "${BLUE}Creating Docker group...${NC}"
+  sudo groupadd docker
 fi
+
+# Add the current user to the Docker group
+echo -e "${BLUE}Adding the current user to the Docker group...${NC}"
+sudo usermod -aG docker $USER
 
 # Display in blue
 echo -e "${BLUE}Installing curl and wget...${NC}"
