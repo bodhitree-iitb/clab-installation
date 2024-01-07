@@ -12,7 +12,7 @@ Before installing the VLab app, ensure that the following dependencies are insta
 To install the VLab app, you can use the provided installation script. Open your terminal and run the following command:
 
 ```bash
-curl https://raw.githubusercontent.com/bodhitree-iitb/vlab-isntallation/main/ubuntu-isntall.sh 2> /dev/null | sudo sh
+sudo apt update -y && sudo apt install -y curl && curl https://raw.githubusercontent.com/bodhitree-iitb/vlab-isntallation/main/ubuntu-isntall.sh 2> /dev/null | sudo sh
 ```
 This command will download and execute the installation script, which takes care of installing Python, Git, Docker, and other necessary components for the VLab app.
 
