@@ -42,7 +42,7 @@ sudo apt install -y curl wget
 
 # Download the Debian package
 echo -e "${BLUE}Downloading the Debian package...${NC}"
-wget https://bighome.iitb.ac.in/index.php/s/jBnqDiadf2abatS/download/VLab_1.5.4_amd64.deb
+wget https://github.com/bodhitree-iitb/clab-installation/releases/download/v1.6.2/vlab_1.6.2_debian_amd64.deb
 
 # Install the downloaded Debian package using dpkg
 echo -e "${BLUE}Installing the downloaded Debian package...${NC}"
