@@ -54,7 +54,7 @@ sudo apt install -fy
 
 # Install additional packages
 echo -e "${BLUE}Installing Python3, Git, and Docker...${NC}"
-sudo apt install -y python3 git docker.io python-is-python3
+sudo apt install -y python3 git python-is-python3
 
 # Cleanup downloaded Debian package
 echo -e "${BLUE}Cleaning up...${NC}"
