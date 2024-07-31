@@ -42,11 +42,11 @@ sudo apt install -y curl wget
 
 # Download the Debian package
 echo -e "${BLUE}Downloading the Debian package...${NC}"
-wget https://github.com/bodhitree-iitb/clab-installation/releases/download/v1.5.8/cLab_1.5.8_amd64_debian.deb
+wget https://github.com/bodhitree-iitb/clab-installation/releases/download/v1.5.9/VLab_1.5.9-linux.deb
 
 # Install the downloaded Debian package using dpkg
 echo -e "${BLUE}Installing the downloaded Debian package...${NC}"
-sudo dpkg -i cLab_1.5.8_amd64_debian.deb
+sudo dpkg -i VLab_1.5.9-linux.deb
 
 # Install dependencies (if any)
 echo -e "${BLUE}Installing dependencies...${NC}"
@@ -58,7 +58,7 @@ sudo apt install -y python3 git docker.io python-is-python3
 
 # Cleanup downloaded Debian package
 echo -e "${BLUE}Cleaning up...${NC}"
-rm cLab_1.5.8_amd64_debian.deb
+rm VLab_1.5.9-linux.deb
 
 # Enable Docker service
 echo -e "${BLUE}Enabling Docker service...${NC}"
