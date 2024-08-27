@@ -87,3 +87,17 @@ curl https://raw.githubusercontent.com/bodhitree-iitb/vlab-installation/main/ubu
 ```
 or manually downloading and double clicking appropriate file (*.deb for debian)
 [link](https://drive.google.com/drive/folders/1hXk_7kaWA71WSfltraeLEIzKlHs0ns1Z?usp=sharing) (only accessible via iitb google account)
+
+5. ## Electron sandbox issue
+
+Run the following in your terminal
+
+```bash
+/opt/Vlab/vlab
+```
+
+If you see the error `FATAL:gpu_data_manager_impl_private.cc(445)] GPU process isn't usable`, use the following command to fix the issue
+
+```bash
+sudo sed -i 's/\(\/opt\/VLab\/vlab\)/\1 --no-sandbox/g' /usr/share/applications/vlab.desktop
+```
