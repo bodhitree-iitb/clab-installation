@@ -7,6 +7,14 @@ Before installing the VLab app, ensure that the following dependencies are insta
 - Git
 - Docker
 
+## Installation (Arch Linux)
+
+```bash
+paru -S vlab-bin
+# OR
+yay -S vlab-bin
+```
+
 ## Installation using Script
 
 To install the VLab app, you can use the provided installation script. Open your terminal and run the following command:
