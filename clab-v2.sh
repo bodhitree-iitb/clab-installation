@@ -55,7 +55,7 @@ sudo apt install -fy
 
 # Cleanup downloaded Debian package
 echo -e "${BLUE}Cleaning up...${NC}"
-rm clab_0.1.6_amd64.deb
+rm clab_1.0.0_amd64.deb
 
 # Enable Docker service
 echo -e "${BLUE}Enabling Docker service...${NC}"
