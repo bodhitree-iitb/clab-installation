@@ -43,11 +43,11 @@ sudo apt install -y curl wget
 
 # Download the Debian package
 echo -e "${BLUE}Downloading the Debian package...${NC}"
-wget https://releases.labpc0.duckdns.org/download/flavor/default/0.1.6/linux_64/clab_0.1.6_amd64.deb
+wget https://bodhitree.cse.iitb.ac.in/clab/clab_1.0.0_amd64.deb
 
 # Install the downloaded Debian package using dpkg
 echo -e "${BLUE}Installing the downloaded Debian package...${NC}"
-sudo dpkg -i clab_0.1.6_amd64.deb
+sudo dpkg -i clab_1.0.0_amd64.deb
 
 # Install dependencies (if any)
 echo -e "${BLUE}Installing dependencies...${NC}"
