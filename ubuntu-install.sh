@@ -35,6 +35,7 @@ fi
 # Add the current user to the Docker group
 echo -e "${BLUE}Adding the current user to the Docker group...${NC}"
 sudo usermod -aG docker $USER
+sudo newgrp docker
 
 # Display in blue
 echo -e "${BLUE}Installing curl and wget...${NC}"
